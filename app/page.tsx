@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Page() {
   return (
-    <main style={{ color: "#fff", fontFamily: "sans-serif", minHeight: "100vh", padding: "40px 20px", textAlign: "center" }}>
+    <main style={{ color: "#fff", fontFamily: "sans-serif", minHeight: "100vh", padding: "40px 20px", textAlign: "center", backgroundColor: "#000" }}>
       <h1 style={{ color: "#ff0000", fontSize: "3rem", margin: "0", letterSpacing: "2px" }}>SPARSE DIVISION</h1>
       <p style={{ letterSpacing: "4px", color: "#888", marginBottom: "40px" }}>PRECISION. POWER. PERFORMANCE.</p>
       
