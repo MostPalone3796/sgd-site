@@ -1,45 +1,27 @@
-'use client';
-import React, { useEffect, useState } from "react";
+"use client";
+import React from "react";
 
-export default function GamingCommunitySite() {
-  const [data, setData] = useState({ m: "...", o: "..." });
-
-  useEffect(() => {
-    fetch("https://discord.com/api/guilds/1487208919695753286/widget.json")
-      .then(res => res.json())
-      .then(d => setData({ m: d.members?.length || "0", o: d.presence_count || "0" }))
-      .catch(() => setData({ m: "LIVE", o: "LIVE" }));
-  }, []);
-
-  const s = {
-    card: { background: '#111', padding: '20px', border: '1px solid #333', marginBottom: '20px' },
-    red: { color: '#ff0000', fontWeight: 'bold' }
-  };
-
+export default function Page() {
   return (
-    <div style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'sans-serif', padding: '20px' }}>
-      <h1 style={s.red}>SPARSE GAMING</h1>
+    <main style={{ color: "#fff", fontFamily: "sans-serif", minHeight: "100vh", padding: "40px 20px", textAlign: "center" }}>
+      <h1 style={{ color: "#ff0000", fontSize: "3rem", margin: "0", letterSpacing: "2px" }}>SPARSE DIVISION</h1>
+      <p style={{ letterSpacing: "4px", color: "#888", marginBottom: "40px" }}>PRECISION. POWER. PERFORMANCE.</p>
       
-      <div style={{ textAlign: 'center', margin: '40px 0' }}>
-        <h2 style={{ fontSize: '2.5rem' }}>DIVISION HQ</h2>
-        <p>MEMBERS: {data.m} | ONLINE: <span style={{color:'#0f0'}}>{data.o}</span></p>
+      <div style={{ margin: "0 auto 40px", padding: "20px", border: "1px solid #333", maxWidth: "400px", background: "#0a0a0a" }}>
+        <h2 style={{ color: "#ff0000", fontSize: "1.1rem", textTransform: "uppercase" }}>Minecraft Realm</h2>
+        <p style={{ fontSize: "1.4rem", fontWeight: "bold", margin: "10px 0" }}>VN9YgHYHLBCKCus</p>
+        <p style={{ fontSize: "0.8rem", opacity: 0.6 }}>Discord Join Required</p>
       </div>
 
-      <div style={s.card}>
-        <h3 style={s.red}>MINECRAFT REALM</h3>
-        <p>Invite Code: <span style={{fontSize:'1.2rem', letterSpacing:'1px'}}>VN9YgHYHLBCKCus</span></p>
-        <p style={{fontSize:'0.8rem', opacity:0.6}}>*Discord is required.</p>
+      <div style={{ marginBottom: "40px" }}>
+        <h2 style={{ color: "#ff0000", fontSize: "1.1rem", textTransform: "uppercase" }}>Command Roster</h2>
+        <p style={{ margin: "5px 0" }}>Owner: MostPalone3796</p>
+        <p style={{ margin: "5px 0" }}>Support: Barktheunlucky / H1ltxn02</p>
       </div>
 
-      <div style={s.card}>
-        <h3 style={s.red}>COMMAND</h3>
-        <p>Owner: MostPalone3796</p>
-        <p>Support: Barktheunlucky / H1ltxn02</p>
-      </div>
-
-      <center>
-        <a href="https://discord.gg/DS6uGNvpNE" style={{ background: '#ff0000', color: '#fff', padding: '10px 20px', textDecoration: 'none', fontWeight: 'bold' }}>JOIN DISCORD</a>
-      </center>
-    </div>
+      <a href="https://discord.gg/DS6uGNvpNE" style={{ background: "#ff0000", color: "#fff", padding: "15px 30px", textDecoration: "none", fontWeight: "bold", borderRadius: "2px", display: "inline-block" }}>
+        JOIN DISCORD
+      </a>
+    </main>
   );
 }
