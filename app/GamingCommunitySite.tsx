@@ -92,3 +92,47 @@ export default function GamingCommunitySite() {
               { n: 'Minecraft', i: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400', s: 'ACTIVE REALM' }
             ].map(g => (
               <div key={g.n} style={{ position: 'relative', height: '180px', border: '1px solid #222' }}>
+                <img src={g.i} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }} alt={g.n} />
+                <div style={{ position: 'absolute', bottom: 15, left: 15 }}>
+                  <div style={{ fontWeight: 'bold' }}>{g.n}</div>
+                  {g.s && <div style={{ color: '#00ff00', fontSize: '0.6rem' }}>{g.s}</div>}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <Title text="Join the Realm" />
+          <div style={{ background: 'rgba(255,0,0,0.05)', padding: '25px', border: '1px solid #ff0000', marginBottom: '60px', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.8rem', marginBottom: '15px' }}><strong>Discord Required.</strong> Code below:</p>
+            <div style={{ background: '#000', padding: '10px', border: '2px dashed #ff0000', color: '#ff0000', fontWeight: 'bold', fontSize: '1.2rem', letterSpacing: '2px' }}>
+              VN9YgHYHLBCKCus
+            </div>
+          </div>
+
+          <Title text="Intel Feed" />
+          <iframe src="https://discord.com/widget?id=1487208919695753286&theme=dark" width="100%" height="400" style={{ border: '1px solid #222', marginBottom: '60px' }}></iframe>
+        </div>
+      ) : (
+        <div style={{ padding: '40px 5%' }}>
+          <Title text="Command" />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
+            {[
+              { r: 'OWNER', n: 'MostPalone3796' },
+              { r: 'SUPPORT', n: 'Barktheunlucky' },
+              { r: 'SUPPORT', n: 'H1ltxn02' },
+              { r: 'REALM', n: 'Tipanwolf15' },
+              { r: 'BF6 CM', n: 'coldvalor26' }
+            ].map(s => (
+              <div key={s.n} style={{ background: '#080808', border: '1px solid #222', padding: '20px' }}>
+                <div style={{ color: '#ff0000', fontSize: '0.6rem', fontWeight: 'bold' }}>{s.r}</div>
+                <div style={{ fontSize: '1.1rem', marginTop: '5px' }}>{s.n}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </main>
+    );
+}
+  );
+}
