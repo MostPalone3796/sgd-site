@@ -1,5 +1,16 @@
-'use client';
-import GamingCommunitySite from './GamingCommunitySite';
-export default function Page() {
-  return <GamingCommunitySite />;
+export const metadata = {
+  title: 'Sparse Gaming Division',
+  description: 'Official HQ',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+    </html>
+  )
 }
